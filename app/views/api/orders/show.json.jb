@@ -1,0 +1,10 @@
+{
+  id: @order.id,
+  user_id: @order.user_id,
+  journey_id: @order.journey_id,
+  review_rating: @order.review_rating,
+  review_comment: @order.review_comment,
+  subtotal: @order.subtotal,
+  tax: @order.tax,
+  total: @order.total,
+}

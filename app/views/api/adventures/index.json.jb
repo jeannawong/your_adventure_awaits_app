@@ -1,0 +1,14 @@
+@adventures.map do |adventure|
+  {
+    id: adventure.id,
+    title: adventure.title,
+    description: adventure.description,
+    cost: adventure.cost,
+    time_of_day: adventure.time_of_day,
+    duration: adventure.duration,
+    memory_post: adventure.memory_post,
+    memory_image: adventure.memory_image,
+    journey_id: adventure.journey_id,
+    accepted: adventure.accepted,
+  }
+end

@@ -1,0 +1,7 @@
+@helpful_hints.map do |helpful_hint|
+  {
+    id: helpful_hint.id,
+    description: helpful_hint.description,
+    hint_symbol: helpful_hint.hint_symbol,
+  }
+end

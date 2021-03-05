@@ -1,0 +1,5 @@
+{
+  id: @adventures_helpful_hint.id,
+  adventure_id: @adventures_helpful_hint.adventure_id,
+  helpful_hint_id: @adventures_helpful_hint.helpful_hint_id,
+}
