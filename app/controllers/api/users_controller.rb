@@ -8,10 +8,10 @@ class Api::UsersController < ApplicationController
       username: params[:username],
       password: params[:password],
       password_confirmation: params[:password_confirmation],
+      admin: false,
     )
 
     if user.save
-      accepted: false
       render json: { message: "User created successfully" }, status: :created
     else
       render json: { errors: user.error.full_messages }, status: :bad_request
