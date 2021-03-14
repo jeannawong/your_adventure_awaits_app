@@ -3,5 +3,6 @@
     id: journey.id,
     name: journey.name,
     price: journey.price,
+    images: journey.images,
   }
 end

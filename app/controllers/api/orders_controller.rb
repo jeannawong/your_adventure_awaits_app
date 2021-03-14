@@ -16,7 +16,7 @@ class Api::OrdersController < ApplicationController
     calculated_total = calculated_subtotal + calculated_tax
     # Save the order in the database
     @order = Order.new(
-      user_id: params[:user_id],
+      user_id: current_user.id,
       journey_id: params[:journey_id],
       review_rating: params[:review_rating],
       review_comment: params[:review_comment],
