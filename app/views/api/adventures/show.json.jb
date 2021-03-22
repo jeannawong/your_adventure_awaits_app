@@ -5,6 +5,7 @@
   cost: @adventure.cost,
   time_of_day: @adventure.time_of_day,
   duration: @adventure.duration,
+  helpful_hints: @adventure.helpful_hints,
   memory_post: @adventure.memory_post,
   memory_image: @adventure.memory_image,
   journey_id: @adventure.journey_id,

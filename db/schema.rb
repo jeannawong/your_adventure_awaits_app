@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_26_020538) do
+ActiveRecord::Schema.define(version: 2021_03_21_160215) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,7 +28,6 @@ ActiveRecord::Schema.define(version: 2021_02_26_020538) do
     t.string "cost"
     t.string "time_of_day"
     t.string "duration"
-    t.integer "adventures_helpful_hints_id"
     t.string "memory_post"
     t.string "memory_image"
     t.integer "journey_id"

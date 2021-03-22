@@ -8,6 +8,8 @@ class Api::AdventuresController < ApplicationController
 
     @adventures = Adventure.all
 
+    # @adventure_helpful_hint = AdventureHelpfulHint.find_by(id: params["id"])
+
     if params[:search]
       @adventures = @adventures.where("name ILIKE ?", "%#{params[:search]}%")
     end
@@ -56,6 +58,8 @@ class Api::AdventuresController < ApplicationController
   end
 
   def update
+    response = Cloudinary::Uploader.upload(params[:memory_image], resource_type: :auto)
+    cloudinary_url = response["secure_url"]
     @adventure = Adventure.find_by(id: params["id"])
     @adventure.title = params["title"] || @adventure.title
     @adventure.description = params["description"] || @adventure.description
@@ -63,7 +67,7 @@ class Api::AdventuresController < ApplicationController
     @adventure.time_of_day = params["time_of_day"] || @adventure.time_of_day
     @adventure.duration = params["duration"] || @adventure.duration
     @adventure.memory_post = params["memory_post"] || @adventure.memory_post
-    @adventure.memory_image = params["memory_image"] || @adventure.memory_image
+    @adventure.memory_image = cloudinary_url || @adventure.memory_image
     @adventure.journey_id = params["journey_id"] || @adventure.journey_id
     @adventure.accepted = params["accepted"] || @adventure.accepted
 
